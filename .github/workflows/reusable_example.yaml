@@ -1,0 +1,15 @@
+name: reusable-example
+on:
+  workflow_call:
+    inputs:
+      message:
+        description: a message to be show in logs
+        required: true
+        type: string
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+    - name: log-message
+      run: |
+        echo "message: ${{ inputs.message }}"
