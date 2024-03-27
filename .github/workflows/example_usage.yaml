@@ -11,5 +11,5 @@ jobs:
   run-reusable-example:
     uses: "./.github/workflows/reusable_example.yaml"
     if: ${{ !github.event.pull_request.draft }}
-    with:
+    secrets:
       message: ${{ secrets.MESSAGE }}
