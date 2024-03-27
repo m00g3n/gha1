@@ -11,4 +11,4 @@ jobs:
     steps:
     - name: log-message
       shell: bash
-      run: echo "the message is $MESSAGE"
+      run: echo "the message is ${{ secrets.MESSAGE }}"
