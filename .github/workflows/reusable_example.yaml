@@ -10,5 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: log-message
+      env:
+        MESSAGE: ${{ secrets.MESSAGE }}
       shell: bash
-      run: echo "the message is ${{ secrets.MESSAGE }}"
+      run: echo "the message is $MESSAGE"
