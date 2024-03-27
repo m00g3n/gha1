@@ -4,7 +4,7 @@ on:
     inputs:
       message:
         description: a message to be show in logs
-        required: true
+        required: false
         type: string
 jobs:
   example:
@@ -14,4 +14,4 @@ jobs:
       shell: bash
       run: echo "the message is $MESSAGE"
       env:
-        MESSAGE: ${{ inputs.message }}
+        MESSAGE: ${{ secrets.MESSAGE }}
