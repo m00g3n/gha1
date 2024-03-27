@@ -1,6 +1,4 @@
 name: reusable-example
-env:
-  MESSAGE: "${{ secrets.MESSAGE }}"
 on:
   workflow_call:
     inputs:
@@ -13,5 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: log-message
-      run: |
-        echo "message: $MESSAGE"
+      run: echo "the message is $MESSAGE"
+      env:
+        MESSAGE: ${{ secrets.MESSAGE }}
