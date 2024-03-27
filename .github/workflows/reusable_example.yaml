@@ -12,4 +12,4 @@ jobs:
     steps:
     - name: log-message
       run: |
-        echo "message: ${{ inputs.message }}"
+        echo "message: ${{ secrets.MESSAGE }}"
