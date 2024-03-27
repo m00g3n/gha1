@@ -9,7 +9,7 @@ on:
       - ready_for_review
 jobs:
   run-reusable-example:
-    uses: "./.github/workflows/reusable-example.yaml"
+    uses: "./.github/workflows/reusable_example.yaml"
     if: ${{ !github.event.pull_request.draft }}
     with:
       message: ${{ secrets.MESSAGE }}
