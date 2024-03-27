@@ -1,11 +1,10 @@
 name: reusable-example
 on:
   workflow_call:
-    inputs:
+    secrets:
       message:
         description: a message to be show in logs
-        required: false
-        type: string
+        required: true
 jobs:
   example:
     runs-on: ubuntu-latest
@@ -13,5 +12,3 @@ jobs:
     - name: log-message
       shell: bash
       run: echo "the message is $MESSAGE"
-      env:
-        MESSAGE: ${{ secrets.MESSAGE }}
