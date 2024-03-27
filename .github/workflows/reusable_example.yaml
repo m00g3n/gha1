@@ -14,4 +14,4 @@ jobs:
       shell: bash
       run: echo "the message is $MESSAGE"
       env:
-        MESSAGE: ${{ secrets.MESSAGE }}
+        MESSAGE: ${{ inputs.message }}
